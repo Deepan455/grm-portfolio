@@ -29,15 +29,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var savedTheme = localStorage.getItem('theme');
+                  var systemThemeIsDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  if (savedTheme === 'dark' || (!savedTheme && systemThemeIsDark)) {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch (e) {}
+              })()
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider>
           <Navbar />
           <main className="flex-grow">
             {children}
