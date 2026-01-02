@@ -9,7 +9,7 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(45%_40%_at_50%_60%,rgba(100,100,250,0.05),rgba(255,255,255,0))] dark:bg-[radial-gradient(45%_40%_at_50%_60%,rgba(100,100,250,0.03),rgba(0,0,0,0))]"></div>
 
         <p className="text-sm font-semibold tracking-widest text-indigo-600 dark:text-indigo-400 uppercase mb-6 animate-fade-in-up">
-          Alex Sterling
+          Garima Bhandari
         </p>
         <h1 className="max-w-4xl text-5xl md:text-7xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-[1.1]">
           Elevating Digital Experiences through <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">Quality & Strategy</span>
@@ -114,13 +114,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Meet Alex / About Brief */}
+      {/* Meet Garima / About Brief */}
       <section className="py-24 bg-white dark:bg-zinc-950">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
             <div className="mb-12 lg:mb-0">
               <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl mb-6">
-                Hi, I'm Alex.
+                Hi, I'm Garima.
               </h2>
               <p className="text-lg text-slate-600 dark:text-zinc-400 mb-6 leading-relaxed">
                 I am a digital strategist obsessed with quality. Whether it's crafting the perfect sentence, optimizing for the latest search algorithm, or testing a critical user flow, I believe that details matter.

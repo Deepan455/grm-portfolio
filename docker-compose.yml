@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: grm-portfolio-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - MONGODB_URI=mongodb://mongo:27017/grm_portfolio
+    depends_on:
+      - mongo
+    networks:
+      - app-network
+
+  mongo:
+    container_name: grm-portfolio-mongo
+    image: mongo:latest
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mongo-data:

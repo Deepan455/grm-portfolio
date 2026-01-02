@@ -1,6 +1,6 @@
 export const metadata = {
-    title: "Contact | Alex Sterling",
-    description: "Get in touch with Alex Sterling for your next digital project.",
+    title: "Contact | Garima Bhandari",
+    description: "Get in touch with Garima Bhandari for your next digital project.",
 };
 
 export default function ContactPage() {
@@ -65,7 +65,7 @@ export default function ContactPage() {
                                     </div>
                                     <div className="ml-6">
                                         <h4 className="text-lg font-bold text-slate-900 dark:text-white">Email</h4>
-                                        <p className="text-slate-600 dark:text-zinc-400">hello@alexsterling.com</p>
+                                        <p className="text-slate-600 dark:text-zinc-400">hello@Garimasterling.com</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start">

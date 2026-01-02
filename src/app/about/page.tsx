@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-    title: "About Alex Sterling | SEO & Digital Strategy",
-    description: "Learn about Alex Sterling's journey, philosophy, and experience in SEO, Content Writing, and Quality Assurance.",
+    title: "About Garima Bhandari | SEO & Digital Strategy",
+    description: "Learn about Garima Bhandari's journey, philosophy, and experience in SEO, Content Writing, and Quality Assurance.",
 };
 
 export default function AboutPage() {

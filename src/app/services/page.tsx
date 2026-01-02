@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-    title: "Services | Alex Sterling",
+    title: "Services | Garima Bhandari",
     description: "Comprehensive SEO, Content Writing, and Digital Marketing services designed to elevate your brand.",
 };
 

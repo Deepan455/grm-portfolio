@@ -8,7 +8,7 @@ export default function Footer() {
                 </div>
                 <div className="mt-8 md:mt-0 md:order-1">
                     <p className="text-center text-base text-slate-400 dark:text-zinc-500">
-                        &copy; {new Date().getFullYear()} Alex Sterling. All rights reserved.
+                        &copy; {new Date().getFullYear()} Garima Bhandari. All rights reserved.
                     </p>
                 </div>
             </div>
