@@ -53,7 +53,7 @@ export default async function BlogPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {posts.map((post: IPost) => (
                             <article
-                                key={post._id as string}
+                                key={post._id as unknown as string}
                                 className="group relative bg-card rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full hover:-translate-y-1"
                             >
                                 <Link href={`/blog/${post.slug}`} className="block relative aspect-video overflow-hidden">
