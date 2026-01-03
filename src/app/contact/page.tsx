@@ -1,6 +1,8 @@
+import ContactForm from "@/components/ContactForm";
+
 export const metadata = {
     title: "Contact | Garima Bhandari",
-    description: "Get in touch with Garima Bhandari for your next digital project.",
+    description: "Get in touch with Garima Bhandari for your next SEO project.",
 };
 
 export default function ContactPage() {
@@ -18,38 +20,7 @@ export default function ContactPage() {
                 <div className="grid lg:grid-cols-2 gap-16 items-start">
                     {/* Contact Form */}
                     <div className="bg-slate-50 dark:bg-zinc-900/50 rounded-3xl p-8 border border-slate-100 dark:border-zinc-800">
-                        <form className="space-y-6">
-                            <div className="grid grid-cols-2 gap-6">
-                                <div>
-                                    <label htmlFor="firstName" className="block text-sm font-medium text-slate-700 dark:text-zinc-300 mb-2">First Name</label>
-                                    <input type="text" id="firstName" className="w-full px-4 py-3 rounded-xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-700 focus:ring-2 focus:ring-indigo-500 outline-none transition-all" placeholder="Jane" />
-                                </div>
-                                <div>
-                                    <label htmlFor="lastName" className="block text-sm font-medium text-slate-700 dark:text-zinc-300 mb-2">Last Name</label>
-                                    <input type="text" id="lastName" className="w-full px-4 py-3 rounded-xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-700 focus:ring-2 focus:ring-indigo-500 outline-none transition-all" placeholder="Doe" />
-                                </div>
-                            </div>
-                            <div>
-                                <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-zinc-300 mb-2">Email Address</label>
-                                <input type="email" id="email" className="w-full px-4 py-3 rounded-xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-700 focus:ring-2 focus:ring-indigo-500 outline-none transition-all" placeholder="jane@example.com" />
-                            </div>
-                            <div>
-                                <label htmlFor="subject" className="block text-sm font-medium text-slate-700 dark:text-zinc-300 mb-2">Subject</label>
-                                <select id="subject" className="w-full px-4 py-3 rounded-xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-700 focus:ring-2 focus:ring-indigo-500 outline-none transition-all text-slate-600 dark:text-zinc-400">
-                                    <option>General Inquiry</option>
-                                    <option>SEO Audit</option>
-                                    <option>Content Strategy</option>
-                                    <option>Collaboration</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-zinc-300 mb-2">Message</label>
-                                <textarea id="message" rows={5} className="w-full px-4 py-3 rounded-xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-700 focus:ring-2 focus:ring-indigo-500 outline-none transition-all resize-none" placeholder="Tell me about your project..."></textarea>
-                            </div>
-                            <button type="button" className="w-full py-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold transition-colors">
-                                Send Message
-                            </button>
-                        </form>
+                        <ContactForm />
                     </div>
 
                     {/* Contact Info */}
@@ -65,7 +36,7 @@ export default function ContactPage() {
                                     </div>
                                     <div className="ml-6">
                                         <h4 className="text-lg font-bold text-slate-900 dark:text-white">Email</h4>
-                                        <p className="text-slate-600 dark:text-zinc-400">hello@Garimasterling.com</p>
+                                        <p className="text-slate-600 dark:text-zinc-400">pradippandey455@gmail.com</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start">

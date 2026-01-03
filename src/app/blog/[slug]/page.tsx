@@ -3,6 +3,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import dbConnect from "@/lib/db";
 import Post, { IPost } from "@/models/Post";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface Props {
     params: Promise<{
@@ -93,18 +95,20 @@ export default async function BlogPostPage({ params }: Props) {
                     )}
                 </header>
 
-                <div className="prose prose-lg dark:prose-invert prose-slate mx-auto max-w-none
-                    prose-headings:font-bold prose-headings:text-slate-900 dark:prose-headings:text-white
-                    prose-p:text-slate-600 dark:prose-p:text-zinc-400 prose-p:leading-relaxed
-                    prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline
-                    prose-img:rounded-xl prose-img:shadow-lg
-                    prose-blockquote:border-l-4 prose-blockquote:border-blue-500 prose-blockquote:bg-slate-50 dark:prose-blockquote:bg-zinc-900/50 prose-blockquote:p-6 prose-blockquote:rounded-r-lg prose-blockquote:not-italic
-                    marker:text-blue-500 dark:marker:text-blue-400">
-                    {/* 
-                      We are rendering the content as HTML. 
-                      Ideally, this should be sanitized if the input isn't trusted. 
+                {/* 
+                      Using react-markdown to render markdown content safely and correctly.
+                      remark-gfm adds support for GitHub Flavored Markdown (tables, strikethrough, etc.)
                     */}
-                    <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                <div className="prose prose-lg dark:prose-invert prose-slate mx-auto max-w-none
+                        prose-headings:font-bold prose-headings:text-slate-900 dark:prose-headings:text-white
+                        prose-p:text-slate-600 dark:prose-p:text-zinc-400 prose-p:leading-relaxed
+                        prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline
+                        prose-img:rounded-xl prose-img:shadow-lg
+                        prose-blockquote:border-l-4 prose-blockquote:border-blue-500 prose-blockquote:bg-slate-50 dark:prose-blockquote:bg-zinc-900/50 prose-blockquote:p-6 prose-blockquote:rounded-r-lg prose-blockquote:not-italic
+                        marker:text-blue-500 dark:marker:text-blue-400">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                        {post.content}
+                    </ReactMarkdown>
                 </div>
 
                 <hr className="my-16 border-slate-200 dark:border-zinc-800" />
