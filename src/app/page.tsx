@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -134,8 +135,13 @@ export default function Home() {
             </div>
             <div className="relative">
               <div className="aspect-square bg-slate-100 dark:bg-zinc-900 rounded-2xl overflow-hidden flex items-center justify-center border border-slate-200 dark:border-zinc-800">
-                {/* Placeholder for Profile Image */}
-                <p className="text-slate-400 dark:text-zinc-600 font-medium">Profile Image Placeholder</p>
+                <Image
+                  src="/avatar.png"
+                  alt="Garima Bhandari Avatar"
+                  width={500}
+                  height={500}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-indigo-50 dark:bg-indigo-900/10 rounded-full -z-10 blur-3xl opacity-60"></div>
             </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
     title: "About Garima Bhandari | SEO & Digital Strategy",
@@ -28,7 +29,13 @@ export default function AboutPage() {
                     <div className="lg:grid lg:grid-cols-12 lg:gap-16 items-start">
                         <div className="lg:col-span-5 mb-12 lg:mb-0 relative">
                             <div className="aspect-[4/5] bg-slate-200 dark:bg-zinc-800 rounded-2xl overflow-hidden flex items-center justify-center border border-slate-300 dark:border-zinc-700 shadow-xl rotate-2 hover:rotate-0 transition-transform duration-500">
-                                <span className="text-slate-500 dark:text-zinc-500 font-medium">Portrait Placeholder</span>
+                                <Image
+                                    src="/avatar.png"
+                                    alt="Garima Bhandari Avatar"
+                                    width={500}
+                                    height={625}
+                                    className="w-full h-full object-cover"
+                                />
                             </div>
                             <div className="absolute -z-10 top-12 -left-12 w-full h-full border-2 border-indigo-500/20 dark:border-indigo-400/20 rounded-2xl -rotate-2"></div>
                         </div>
