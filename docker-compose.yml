@@ -12,6 +12,10 @@ services:
     environment:
       - NODE_ENV=production
       - MONGODB_URI=mongodb://mongo:27017/grm_portfolio
+      - EMAIL_USER=${EMAIL_USER}
+      - EMAIL_PASS=${EMAIL_PASS}
+    volumes:
+      - ./public/uploads:/app/public/uploads
     depends_on:
       - mongo
     networks:
